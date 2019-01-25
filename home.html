@@ -1,0 +1,36 @@
+<html>
+  <head></head>
+  <body>
+    <h>Testing count down timer</h></br></br>
+    <script src="blocksdk.js"></script>
+    <script src="myTest.js"></script>
+
+    <script>
+
+      // do something with the sdk
+      
+      
+      var sdk = new window.sfdc.BlockSDK();
+      sdk.getContent(function (content) {
+        content += '.';
+        alert(content);
+      });
+      
+      
+      function myFunction(clicked_value) {
+
+        console.log(clicked_value);
+        
+//        var sdk = new window.sfdc.BlockSDK();
+        
+        sdk.setContent(clicked_value);
+//        sdk.setContent(clicked_value, function (content) { console.log(content); });
+//        sdk.setSuperContent(clicked_value, function (setContent) { });
+          console.log('Ran');
+      }
+      
+    </script>
+    
+    MyDate: <input type="text" id="mydate" onfocusout="myFunction(this.value)"/>
+  </body>
+</html>
