@@ -22,7 +22,12 @@
         var myHeight = document.getElementById("uiHeight").value;
         
         // Build the HTML
-        var myURL = '<img src="https://date-gif.herokuapp.com/serve?time=' + myDate + '&width=' + myWidth + '&height=' + myHeight + '&name=ex1"/>'
+        var myURL = '<img src="https://date-gif.herokuapp.com/serve?time=' + myDate 
+                    + '&width=' + myWidth 
+                    + '&height=' + myHeight 
+                    + '&bg=' + myBGColour 
+                    + '&color=' + myFGColour 
+                    + '&name=ex1"/>'
         sdk.setContent(myURL, function (content) { console.log(content); });
         sdk.setSuperContent(myURL, function (content) { console.log(content); });
           console.log('Ran');
@@ -31,8 +36,8 @@
     </script>
     
     Date: <input type="text" id="uiDate" onfocusout="myFunction(this.value)" value="2019-09-24T20:35"/><br/>
-    BG Colour: <input type="text" id="uiBGColour" onfocusout="myFunction(this.value)" value="028900"/><br/>
-    FG Colour: <input type="text" id="uiFGColour" onfocusout="myFunction(this.value)" value="adff00"/><br/>
+    BG Colour: <input type="color" id="uiBGColour" onfocusout="myFunction(this.value)" value="028900"/><br/>
+    FG Colour: <input type="color" id="uiFGColour" onfocusout="myFunction(this.value)" value="adff00"/><br/>
     Width: <input type="text" id="uiWidth" onfocusout="myFunction(this.value)" value="300"/><br/>
     Height: <input type="text" id="uiHeight" onfocusout="myFunction(this.value)" value="150"/><br/>
 
