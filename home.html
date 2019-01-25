@@ -15,11 +15,11 @@
         console.log(clicked_value);
         
         // Get the values from the UI
-        var myDate = document.getElementById("uiDate");
-        var myBGColour = document.getElementById("uiBGColour");
-        var myFGColour = document.getElementById("uiFGColour");
-        var myWidth = document.getElementById("uiWidth");
-        var myHeight = document.getElementById("uiHeight");
+        var myDate = document.getElementById("uiDate").value;
+        var myBGColour = document.getElementById("uiBGColour").value;
+        var myFGColour = document.getElementById("uiFGColour").value;
+        var myWidth = document.getElementById("uiWidth").value;
+        var myHeight = document.getElementById("uiHeight").value;
         
         // Build the HTML
         var myURL = '<img src="https://date-gif.herokuapp.com/serve?time=' + myDate + '&width=' + myWidth + '&height=' + myHeight + '&name=ex1"/>'
