@@ -16,8 +16,8 @@
         
         // Get the values from the UI
         var myDate = document.getElementById("uiDate").value;
-        var myBGColour = document.getElementById("uiBGColour").value;
-        var myFGColour = document.getElementById("uiFGColour").value;
+        var myBGColour = document.getElementById("uiBGColour").value.slice(-6);
+        var myFGColour = document.getElementById("uiFGColour").value.slice(-6);
         var myWidth = document.getElementById("uiWidth").value;
         var myHeight = document.getElementById("uiHeight").value;
         
@@ -36,8 +36,8 @@
     </script>
     
     Date: <input type="text" id="uiDate" onfocusout="myFunction(this.value)" value="2019-09-24T20:35"/><br/>
-    BG Colour: <input type="color" id="uiBGColour" onfocusout="myFunction(this.value)" value="028900"/><br/>
-    FG Colour: <input type="color" id="uiFGColour" onfocusout="myFunction(this.value)" value="adff00"/><br/>
+    BG Colour: <input type="color" id="uiBGColour" onfocusout="myFunction(this.value)" value="#028900"/><br/>
+    FG Colour: <input type="color" id="uiFGColour" onfocusout="myFunction(this.value)" value="#adff00"/><br/>
     Width: <input type="text" id="uiWidth" onfocusout="myFunction(this.value)" value="300"/><br/>
     Height: <input type="text" id="uiHeight" onfocusout="myFunction(this.value)" value="150"/><br/>
 
