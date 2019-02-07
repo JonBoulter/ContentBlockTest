@@ -55,9 +55,28 @@
       
     </script>
     
-    Date: <input type="text" id="uiDate" onfocusout="myFunction(this.value)" value="2019-09-24T20:35"/><br/>
 
-<!-- Start of uiBGColour -->
+<table>
+  <tr>
+    <td>
+      Date
+    </td>
+    <td colspan="3">
+      <input type="text" id="uiDate" onfocusout="myFunction(this.value)" value="2019-09-24T20:35"/>
+    </td>
+  </tr>
+
+    <tr>
+    <td>
+      Colour
+    </td>
+    <td>
+Something here
+      </td>
+  </tr>
+</table>
+  
+  <!-- Start of uiBGColour -->
 <ul class="slds-color-picker__swatches" role="menu">
   <li class="slds-color-picker__swatch" role="presentation">
     <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityPink') ">
@@ -66,8 +85,6 @@
       </span>
     </a>
   </li>
-</ul>
-<ul class="slds-color-picker__swatches" role="menu">
   <li class="slds-color-picker__swatch" role="presentation">
     <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityCharcoal')">
       <span class="slds-swatch" style="background: #333333;">
@@ -75,10 +92,8 @@
       </span>
     </a>
   </li>
-</ul>
-<ul class="slds-color-picker__swatches" role="menu">
   <li class="slds-color-picker__swatch" role="presentation">
-    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="oninput('VitalityWhite')">
+    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityWhite')">
       <span class="slds-swatch" style="background: #ffffff;">
         <span class="slds-assistive-text" >#ffffff</span>
       </span>
