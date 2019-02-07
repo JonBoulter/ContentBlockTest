@@ -44,8 +44,40 @@
     Date: <input type="text" id="uiDate" onfocusout="myFunction(this.value)" value="2019-09-24T20:35"/><br/>
     BG Colour: <input type="color" id="uiBGColour" onfocusout="myFunction(this.value)" value="#028900"/><br/>
     FG Colour: <input type="color" id="uiFGColour" onfocusout="myFunction(this.value)" value="#adff00"/><br/>
-    Width: <input type="text" id="uiWidth" onfocusout="myFunction(this.value)" value="300"/><br/>
-    Height: <input type="text" id="uiHeight" onfocusout="myFunction(this.value)" value="150"/><br/>
+
+<!-- Start of uiWidth -->
+<div class="slds-form-element">
+  <label class="slds-form-element__label" for="uiWidth">
+    <span class="slds-slider-label">
+      <span class="slds-slider-label__label">Width (%)</span>
+      <span class="slds-slider-label__range">0 - 100</span>
+    </span>
+  </label>
+  <div class="slds-form-element__control">
+    <div class="slds-slider">
+      <input id="uiWidth" class="slds-slider__range" type="range" min="0" max="100" value="100" />
+      <span class="slds-slider__value" aria-hidden="true">100</span>
+    </div>
+  </div>
+</div>
+<!-- End of uiWidth -->
+
+<!-- Start of uiHeight -->
+<div class="slds-form-element">
+  <label class="slds-form-element__label" for="uiHeight">
+    <span class="slds-slider-label">
+      <span class="slds-slider-label__label">Width (%)</span>
+      <span class="slds-slider-label__range">0 - 100</span>
+    </span>
+  </label>
+  <div class="slds-form-element__control">
+    <div class="slds-slider">
+      <input id="uiHeight" class="slds-slider__range" type="range" min="0" max="100" value="100" />
+      <span class="slds-slider__value" aria-hidden="true">100</span>
+    </div>
+  </div>
+</div>
+<!-- End of uiWidth -->
 
 <div class="slds-color-picker">
 <div class="slds-color-picker__summary">
@@ -61,7 +93,7 @@
 </button>
 <div class="slds-form-element slds-color-picker__summary-input">
 <div class="slds-form-element__control">
-<input id="color-picker-summary-input" class="slds-input" type="text" value="#5679C0" />
+<input id="color-picker-summary-input" class="slds-input" type="hidden" value="#5679C0" />
 </div>
 </div>
 </div>
