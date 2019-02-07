@@ -20,10 +20,24 @@
 
         console.log(clicked_value);
         
+        // Set the default for the background
+        var myBGColour = 'f41c5e';
+        var myFGColour = 'ffffff';
+        
         // Get the values from the UI
         var myDate = document.getElementById("uiDate").value;
-        var myBGColour = document.getElementById("uiBGColour").value.slice(-6);
-        var myFGColour = document.getElementById("uiFGColour").value.slice(-6);
+        
+        if(clicked_value==='VitalityPink'){
+          myBGColour = 'f41c5e';
+          myFGColour = 'ffffff';
+        } else if(clicked_value==='VitalityCharcoal'){
+          myBGColour = '333333';
+          myFGColour = 'ffffff';
+        } else if(clicked_value==='VitalityWhite'){
+          myBGColour = 'ffffff';
+          myFGColour = 'f41c5e';
+        }
+
         var myWidth = document.getElementById("uiWidth").value;
         var myHeight = document.getElementById("uiHeight").value;
         
@@ -36,21 +50,18 @@
                     + '&name=ex1"/>'
         sdk.setContent(myURL, function (content) { console.log(content); });
         sdk.setSuperContent(myURL, function (content) { console.log(content); });
-          console.log('Ran');
+        console.log('Ran');
       }
       
     </script>
     
     Date: <input type="text" id="uiDate" onfocusout="myFunction(this.value)" value="2019-09-24T20:35"/><br/>
 
-<input type="hidden" id="uiBGColour" onfocusout="myFunction(this.value)" value="f41c5e"/><br/>
-<input type="hidden" id="uiFGColour" onfocusout="myFunction(this.value)" value="f41c5e"/><br/>
-
 <!-- Start of uiBGColour -->
 <ul class="slds-color-picker__swatches" role="menu">
   <li class="slds-color-picker__swatch" role="presentation">
-    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityPink) ">
-      <span class="slds-swatch" style="background: rgb(227, 171, 236);">
+    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityPink') ">
+      <span class="slds-swatch" style="background: #f41c5e;">
         <span class="slds-assistive-text" >#f41c5e</span>
       </span>
     </a>
@@ -59,7 +70,7 @@
 <ul class="slds-color-picker__swatches" role="menu">
   <li class="slds-color-picker__swatch" role="presentation">
     <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityCharcoal')">
-      <span class="slds-swatch" style="background: rgb(227, 171, 236);">
+      <span class="slds-swatch" style="background: #333333;">
         <span class="slds-assistive-text" >#333333</span>
       </span>
     </a>
@@ -67,8 +78,8 @@
 </ul>
 <ul class="slds-color-picker__swatches" role="menu">
   <li class="slds-color-picker__swatch" role="presentation">
-    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityWhite')">
-      <span class="slds-swatch" style="background: rgb(227, 171, 236);">
+    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="oninput('VitalityWhite')">
+      <span class="slds-swatch" style="background: #ffffff;">
         <span class="slds-assistive-text" >#ffffff</span>
       </span>
     </a>
@@ -85,7 +96,7 @@
   </label>
   <div class="slds-form-element__control">
     <div class="slds-slider">
-      <input id="uiWidth" class="slds-slider__range" type="range" min="0" max="100" value="100" onfocusout="myFunction(this.value)" />
+      <input id="uiWidth" class="slds-slider__range" type="range" min="0" max="100" value="100" oninput="myFunction(this.value)" />
       <span class="slds-slider__value" aria-hidden="true">100</span>
     </div>
   </div>
@@ -101,13 +112,21 @@
   </label>
   <div class="slds-form-element__control">
     <div class="slds-slider">
-      <input id="uiHeight" class="slds-slider__range" type="range" min="0" max="100" value="100" onfocusout="myFunction(this.value)" />
+      <input id="uiHeight" class="slds-slider__range" type="range" min="0" max="100" value="100" oninput="myFunction(this.value)" />
       <span class="slds-slider__value" aria-hidden="true">100</span>
     </div>
   </div>
 </div>
 <!-- End of uiWidth -->
 
+<!-- Start of uiAddLabels -->
+<div class="slds-checkbox_add-button">
+  <input class="slds-assistive-text" type="checkbox" id="add-checkbox-4" value="add-checkbox-4" />
+  <label for="add-checkbox-4" class="slds-checkbox_faux">
+    <span class="slds-assistive-text">Show Labels</span>
+  </label>
+</div>
+<!-- End of uiAddLabels -->
 
   </body>
 </html>
