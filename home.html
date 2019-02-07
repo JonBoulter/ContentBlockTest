@@ -61,87 +61,105 @@
     <td>
       Date
     </td>
-    <td colspan="3">
+    <td>
       <input type="text" id="uiDate" onfocusout="myFunction(this.value)" value="2019-09-24T20:35"/>
     </td>
   </tr>
 
-    <tr>
+  <tr>
     <td>
       Colour
     </td>
     <td>
-Something here
-      </td>
+      <!-- Start of uiBGColour -->
+      <ul class="slds-color-picker__swatches" role="menu">
+        <li class="slds-color-picker__swatch" role="presentation">
+          <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityPink') ">
+            <span class="slds-swatch" style="background: #f41c5e;">
+              <span class="slds-assistive-text" >#f41c5e</span>
+            </span>
+          </a>
+        </li>
+        <li class="slds-color-picker__swatch" role="presentation">
+          <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityCharcoal')">
+            <span class="slds-swatch" style="background: #333333;">
+              <span class="slds-assistive-text" >#333333</span>
+            </span>
+          </a>
+        </li>
+        <li class="slds-color-picker__swatch" role="presentation">
+          <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityWhite')">
+            <span class="slds-swatch" style="background: #ffffff;">
+              <span class="slds-assistive-text" >#ffffff</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <!-- End of uiBGColour -->
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <!-- Start of uiWidth -->
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="uiWidth">
+          <span class="slds-slider-label">
+            <span class="slds-slider-label__label">Width (%)</span>
+          </span>
+        </label>
+        <div class="slds-form-element__control">
+          <div class="slds-slider">
+            <input id="uiWidth" class="slds-slider__range" type="range" min="0" max="100" value="100" oninput="myFunction(this.value)" />
+            <span class="slds-slider__value" aria-hidden="true">100</span>
+          </div>
+        </div>
+      </div>
+      <!-- End of uiWidth --> 
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <!-- Start of uiHeight -->
+      <div class="slds-form-element">
+        <label class="slds-form-element__label" for="uiHeight">
+          <span class="slds-slider-label">
+            <span class="slds-slider-label__label">Width (%)</span>
+          </span>
+        </label>
+        <div class="slds-form-element__control">
+          <div class="slds-slider">
+            <input id="uiHeight" class="slds-slider__range" type="range" min="0" max="100" value="100" oninput="myFunction(this.value)" />
+            <span class="slds-slider__value" aria-hidden="true">100</span>
+          </div>
+        </div>
+      </div>
+      <!-- End of uiWidth -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Show labels
+    </td>
+    <td>
+      <!-- Start of uiAddLabels -->
+      <div class="slds-checkbox_add-button">
+        <input class="slds-assistive-text" type="checkbox" id="add-checkbox-4" value="add-checkbox-4" />
+        <label for="add-checkbox-4" class="slds-checkbox_faux">
+          <span class="slds-assistive-text">Show Labels</span>
+        </label>
+      </div>
+      <!-- End of uiAddLabels -->
+    </td>
   </tr>
 </table>
   
-  <!-- Start of uiBGColour -->
-<ul class="slds-color-picker__swatches" role="menu">
-  <li class="slds-color-picker__swatch" role="presentation">
-    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityPink') ">
-      <span class="slds-swatch" style="background: #f41c5e;">
-        <span class="slds-assistive-text" >#f41c5e</span>
-      </span>
-    </a>
-  </li>
-  <li class="slds-color-picker__swatch" role="presentation">
-    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityCharcoal')">
-      <span class="slds-swatch" style="background: #333333;">
-        <span class="slds-assistive-text" >#333333</span>
-      </span>
-    </a>
-  </li>
-  <li class="slds-color-picker__swatch" role="presentation">
-    <a class="slds-color-picker__swatch-trigger" href="#" role="menuitem" tabindex="0" onclick="myFunction('VitalityWhite')">
-      <span class="slds-swatch" style="background: #ffffff;">
-        <span class="slds-assistive-text" >#ffffff</span>
-      </span>
-    </a>
-  </li>
-</ul>
-<!-- End of uiBGColour -->
 
-<!-- Start of uiWidth -->
-<div class="slds-form-element">
-  <label class="slds-form-element__label" for="uiWidth">
-    <span class="slds-slider-label">
-      <span class="slds-slider-label__label">Width (%)</span>
-    </span>
-  </label>
-  <div class="slds-form-element__control">
-    <div class="slds-slider">
-      <input id="uiWidth" class="slds-slider__range" type="range" min="0" max="100" value="100" oninput="myFunction(this.value)" />
-      <span class="slds-slider__value" aria-hidden="true">100</span>
-    </div>
-  </div>
-</div>
-<!-- End of uiWidth -->
 
-<!-- Start of uiHeight -->
-<div class="slds-form-element">
-  <label class="slds-form-element__label" for="uiHeight">
-    <span class="slds-slider-label">
-      <span class="slds-slider-label__label">Width (%)</span>
-    </span>
-  </label>
-  <div class="slds-form-element__control">
-    <div class="slds-slider">
-      <input id="uiHeight" class="slds-slider__range" type="range" min="0" max="100" value="100" oninput="myFunction(this.value)" />
-      <span class="slds-slider__value" aria-hidden="true">100</span>
-    </div>
-  </div>
-</div>
-<!-- End of uiWidth -->
 
-<!-- Start of uiAddLabels -->
-<div class="slds-checkbox_add-button">
-  <input class="slds-assistive-text" type="checkbox" id="add-checkbox-4" value="add-checkbox-4" />
-  <label for="add-checkbox-4" class="slds-checkbox_faux">
-    <span class="slds-assistive-text">Show Labels</span>
-  </label>
-</div>
-<!-- End of uiAddLabels -->
+
+
+
+
 
   </body>
 </html>
